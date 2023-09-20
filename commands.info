@@ -2,3 +2,9 @@ pip install fastapi[all] -> install all fastapi libraries
 uvicorn main:app --reload -> run local server with auto reloads for our application
 http://127.0.0.1:8000/docs -> documentation of our application
 http://127.0.0.1:8000/redoc -> 2nd version of documentation of our application
+-> install PostGreSQL and pgAdmin
+-> run pgAdmin and create new server
+pip install sqlalchemy alembic psycopg2 -> install libraries
+alembic init migrations -> create migrations
+alembic revision --autogenerate -m "Database creation" -> do migration
+alembic upgrade ba6cbe1b7d43 -> run migration with revision hash
